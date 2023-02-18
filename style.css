@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+	--clr-dark: #324364;
+	--clr-gray: #656565;
+	--clr-accent: #2d6236;
+	--clr-white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+button {
+	font-family: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	height: 100vh;
+	display: flex;
+	color: var(--clr-dark);
+}
+
+/* LOGIN PAGE */
+
+.form-container {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+}
+
+.title-container {
+	text-align: center;
+}
+
+.title {
+	font-size: 2rem;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25em;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: 70%;
+}
+
+input {
+	color: var(--clr-gray);
+	border-radius: 0.75em;
+	border: 1px solid var(--clr-dark);
+	padding: 0.75em 1em;
+}
+
+input:focus {
+	outline: none;
+}
+
+label {
+	font-weight: 500;
+}
+
+button[type='submit'] {
+	color: var(--clr-white);
+	border: none;
+	border-radius: 0.75em;
+	padding: 0.75em 1em;
+	font-weight: 700;
+	cursor: pointer;
+	background-color: var(--clr-accent);
+	transition: translate 150ms, box-shadow 150ms;
+}
+
+button[type='submit']:hover,
+button[type='submit']:focus {
+	translate: 0 -0.1em;
+	box-shadow: 0 0.5em 15px rgba(0, 0, 0, 0.2);
+	outline: none;
+}
+.signup a {
+	color: var(--clr-accent);
+}
+
+.signup a:hover,
+.signup a:focus {
+	border-bottom: 1px solid var(--clr-accent);
+}
+
+.remember-forgot {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 1em;
+}
+
+.forgot {
+	color: var(--clr-accent);
+	background-color: transparent;
+	border: none;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+@media (width>=847px) {
+	.image {
+		flex: 1;
+		background: url('/bg.png') no-repeat;
+		background-size: cover;
+	}
+}
+
+@media (width>=1297px) {
+	form {
+		width: 50%;
+	}
+}
