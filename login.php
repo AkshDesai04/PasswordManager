@@ -13,7 +13,7 @@
 				<h2 class="title">Welcome Back</h2>
 				<p class="sub-title">Let&apos;s get you signed in</p>
 			</div>
-			<form action="">
+			<form action="authAction.php" method="post">
 				<div class="input-container">
 					<label for="email">Email</label>
 					<input
